@@ -141,21 +141,21 @@
 
 Fill in names once your roster is set. With N members, each person presents every N weeks.
 
-| Week | Date   | Topic                                 | Presenter |
-|------|--------|---------------------------------------|-----------|
-| 1    | Aug 9  | Processes & the OS                    |           |
-| 2    | Aug 16 | CPU Scheduling                        | Kaleb     |
-| 3    | Aug 23 | Address Spaces & Translation          | Charlie   |
-| 4    | Aug 30 | Free Space & Paging                   | Christine |
-| 5    | Sep 6  | Advanced Paging & Swapping            | Michael   |
-| 6    | Sep 13 | Real VM Systems + Concurrency Kickoff | Kaleb     |
-| 7    | Sep 20 | Locks                                 |           |
-| 8    | Sep 27 | CVs & Semaphores                      |           |
-| 9    | Oct 4  | Bugs & Events                         |           |
-| 10   | Oct 11 | Devices, Disks & Files                |           |
-| 11   | Oct 18 | File System Implementation            |           |
-| 12   | Oct 25 | Modern Storage                        |           |
-| 13   | Nov 1  | Distributed Systems & Wrap-Up         |           |
+| Week | Date   | Topic                                 | Presenter           |
+| ---- | ------ | ------------------------------------- | ------------------- |
+| 1    | Aug 9  | Processes & the OS                    | Michael             |
+| 2    | Aug 16 | CPU Scheduling                        | Kaleb               |
+| 3    | Aug 23 | Address Spaces & Translation          | Charlie             |
+| 4    | Aug 30 | Free Space & Paging                   | Christine           |
+| 5    | Sep 6  | Advanced Paging & Swapping            | NA                  |
+| 6    | Sep 13 | Real VM Systems + Concurrency Kickoff | Remi/Michael        |
+| 7    | Sep 20 | Locks                                 | Kaleb               |
+| 8    | Sep 27 | CVs & Semaphores                      | Charlie             |
+| 9    | Oct 4  | Bugs & Events                         | Christine           |
+| 10   | Oct 11 | Devices, Disks & Files                | Remi                |
+| 11   | Oct 18 | File System Implementation            | Michael             |
+| 12   | Oct 25 | Modern Storage                        | Plan group project  |
+| 13   | Nov 1  | Distributed Systems & Wrap-Up         | Standup for project |
 
 ---
 
