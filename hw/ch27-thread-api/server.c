@@ -14,12 +14,12 @@ typedef struct {
 } res_t;
 
 static unsigned int counter = 0;
+pthread_mutex_t m;
 
 static void *worker(void *arg) {
 	struct timespec start;
-	clock_gettime(CLOCK_REALTIME, &start);
+	clock_gettime(CLOCK_MONOTONIC, &start);
 	pthread_t tid = pthread_self();
-	// printf("thread ID: %ld, started at: %ld\n", tid, start.tv_sec);
 
 	long long id = (long long)arg;
 	// pretend to do work
@@ -29,14 +29,24 @@ static void *worker(void *arg) {
 		}
 	}
 
+	// increment global counter
+	pthread_mutex_lock(&m);
+	counter++;
+	pthread_mutex_unlock(&m);
+
 	struct timespec end;
-	clock_gettime(CLOCK_REALTIME, &start);
+	clock_gettime(CLOCK_MONOTONIC, &end);
 	// printf("thread ID: %ld, ended at: %ld", tid, start.tv_sec);
 
 	res_t *res = malloc(sizeof(res_t));
 	res->body = "he fwiend";
 	res->status = id;
 
+	long long elsapsed_ms = (end.tv_sec - start.tv_sec) * 1000LL +
+							(end.tv_nsec - start.tv_nsec) / 1000000LL;
+	printf("total milliseconds by thread: %ld worker: %lld. global counter "
+		   "increased to: %d\n",
+		   tid, elsapsed_ms, counter);
 	return res;
 }
 
@@ -48,6 +58,7 @@ struct thread_info {	 /* Used as argument to thread_start() */
 
 int main(int argc, char *argv[]) {
 	pthread_t ids[MAX_RESPONSES] = {0};
+	pthread_mutex_init(&m, NULL);
 
 	for (long long i = 0; i < MAX_RESPONSES; i++) {
 		pthread_t p;
