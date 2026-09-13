@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Site</title>
+    <style>
+      /* Reset */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        /* margin: 0; */
+      }
+
+      body {
+        /* min-height: 100vh; */
+        line-height: 1.5;
+        font-family: system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      .p1 {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+      }
+
+      .p2 {
+        background-color: red;
+        color: black;
+        padding: 1rem;
+      }
+
+      .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <div class="p1">
+        <h2>Welcome</h2>
+        <p>Please read about my odd thoughts and terrific ideas</p>
+        <p>Beep <b>bop</b> boop.</p>
+      </div>
+
+      <div class="p2">
+        <h3>About this universe</h3>
+        <p>
+          The universe is a chaotic infinite terrifying thing that we know
+          almost nothing about.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
