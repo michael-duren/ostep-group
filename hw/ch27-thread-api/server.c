@@ -16,6 +16,11 @@ typedef struct {
 static unsigned int counter = 0;
 pthread_mutex_t m;
 
+static char *read_path(const char *path) {
+	puts("reading file");
+	return NULL;
+}
+
 static void *worker(void *arg) {
 	struct timespec start;
 	clock_gettime(CLOCK_MONOTONIC, &start);
@@ -42,9 +47,9 @@ static void *worker(void *arg) {
 	res->body = "he fwiend";
 	res->status = id;
 
-	long long elsapsed_ms = (end.tv_sec - start.tv_sec) * 1000LL +
-							(end.tv_nsec - start.tv_nsec) / 1000000LL;
-	printf("total milliseconds by thread: %ld worker: %lld. global counter "
+	long int elsapsed_ms = (end.tv_sec - start.tv_sec) * 1000LL +
+						   (end.tv_nsec - start.tv_nsec) / 1000000LL;
+	printf("total milliseconds by thread: %ld worker: %ld. global counter "
 		   "increased to: %d\n",
 		   tid, elsapsed_ms, counter);
 	return res;
