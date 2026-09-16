@@ -151,8 +151,8 @@ Fill in names once your roster is set. With N members, each person presents ever
 | 6    | Sep 13 | Real VM Systems + Concurrency Kickoff | Remi/Michael        |
 | 7    | Sep 20 | Locks                                 | Kaleb               |
 | 8    | Sep 27 | CVs & Semaphores                      | Charlie             |
-| 9    | Oct 4  | Bugs & Events                         | Christine           |
-| 10   | Oct 11 | Devices, Disks & Files                | Remi                |
+| 9    | Oct 4  | Bugs & Events                         | Michael             |
+| 10   | Oct 11 | Devices, Disks & Files                | Kaleb               |
 | 11   | Oct 18 | File System Implementation            | Michael             |
 | 12   | Oct 25 | Modern Storage                        | Plan group project  |
 | 13   | Nov 1  | Distributed Systems & Wrap-Up         | Standup for project |
